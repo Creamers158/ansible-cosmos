@@ -1,4 +1,4 @@
-hosts.txt
+#hosts.txt
 host_vars
 group_vars/all
 group_vars/dvpn_nodes

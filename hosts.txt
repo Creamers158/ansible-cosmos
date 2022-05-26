@@ -1,0 +1,17 @@
+[validators]
+validator-1      ansible_host=94.237.47.240
+
+[testnets]
+validator-2      ansible_host=192.168.1.2
+
+[fullnodes:children]
+validators
+testnets
+
+[sentinelhub_2]
+validator-1
+validator-2
+
+[fullnodes:vars]
+ansible_user=root
+#ansible_ssh_private_key_file=<your SSH keyfile>
