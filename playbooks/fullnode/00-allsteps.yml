@@ -1,0 +1,8 @@
+---
+- import_playbook: 01-golang.yml
+- import_playbook: 02-install-fullnode-binary.yml
+- import_playbook: 03-setup-fullnode.yml
+- import_playbook: 04-install-cosmovisor.yml
+- import_playbook: 05-statesync.yml
+- import_playbook: 07-start-node.yml
+- import_playbook: 08-node-status.yml

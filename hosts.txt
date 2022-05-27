@@ -1,8 +1,8 @@
 [validators]
-validator-1      ansible_host=94.237.47.240
+validator-1      ansible_host=xx.xx.xx.xx
 
 [testnets]
-validator-2      ansible_host=192.168.1.2
+validator-2      ansible_host=xx.xx.xx.xx
 
 [fullnodes:children]
 validators

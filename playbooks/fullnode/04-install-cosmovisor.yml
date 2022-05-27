@@ -62,9 +62,9 @@
         - "{{ fullnode_folder }}/cosmovisor/genesis/bin"
         - "{{ fullnode_folder }}/upgrades"
 
-    - name: Add ~/.zshrc aliases for Cosmovisor
+    - name: Add ~/.bashrc aliases for Cosmovisor
       blockinfile:
-        path: ~/.zshrc
+        path: ~/.bashrc
         marker: "## {mark} added by ansible via playbook - Cosmovisor env vars"
         block: |
           export DAEMON_NAME={{ binary_name }}
