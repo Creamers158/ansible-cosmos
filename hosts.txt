@@ -1,5 +1,6 @@
 [validators]
-validator-1      ansible_host=xx.xx.xx.xx
+validator-sentinel      ansible_host=xx.xx.xx.xx
+validator-comdex      ansible_host=xx.xx.xx.xx
 
 [testnets]
 validator-2      ansible_host=xx.xx.xx.xx
@@ -9,8 +10,11 @@ validators
 testnets
 
 [sentinelhub_2]
-validator-1
+validator-sentinel
 validator-2
+
+[comdex_1]
+validator-comdex
 
 [fullnodes:vars]
 ansible_user=root
