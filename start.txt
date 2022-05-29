@@ -2,3 +2,6 @@ Adjust the hosts file by adding a new host and assign to the roles needed.
 Start deploying with this command, dont forget to adjust the hosts= variable.
 
 export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook playbooks/fullnode/00-allsteps.yml --extra-vars "hosts=validator-x" --ask-pass --ask-become-pass
+
+Or test it locally on a test vm:
+export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook playbooks/fullnode/00-allsteps.yml --extra-vars "hosts=validator-x" --connection=local
