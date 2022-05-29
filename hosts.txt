@@ -2,6 +2,7 @@
 validator-sentinel      ansible_host=xx.xx.xx.xx
 validator-comdex      ansible_host=xx.xx.xx.xx
 validator-sifchain      ansible_host=xx.xx.xx.xx
+validator-akash      ansible_host=xx.xx.xx.xx
 
 [testnets]
 validator-2      ansible_host=xx.xx.xx.xx
@@ -19,6 +20,9 @@ validator-comdex
 
 [sifchain_1]
 validator-sifchain
+
+[akash_2]
+validator-akash
 
 [fullnodes:vars]
 ansible_user=root
