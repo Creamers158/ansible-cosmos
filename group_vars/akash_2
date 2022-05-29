@@ -5,7 +5,7 @@ github_repo_name: akash
 github_repo_local: "{{ ansible_user_dir }}/akash"
 github_version: v0.16.3
 binary_name: akash
-fullnode_folder: "{{ ansible_user_dir }}/.sentinelhub"
+fullnode_folder: "{{ ansible_user_dir }}/.akash"
 seeds: "27eb432ccd5e895c5c659659120d68b393dd8c60@35.247.65.183:26656"
 persistent_peers: "82be8052a081861e5265736fc99c9d330a227069@84.244.95.235:33942,840fca1ad59e7f48fde5f45082465fc2b40f7d6a@135.181.60.250:45418,79f5ccf894f33bf81d9379e7bf1a95b80f75cf91@62.133.229.34:26656"
 minimum_gas_prices: "0.25uakt"
