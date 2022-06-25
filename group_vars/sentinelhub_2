@@ -10,6 +10,6 @@ seeds: "05fe2a7847fd27345250915fd06752c424f40651@85.222.234.135:26656,387027e3b1
 persistent_peers: "cc118aaac9d568629b330f468fd8ecdd5bedea1e@34.145.47.70:26656,d5cf6a6efd0737f68ec026144cdb653abdd11649@207.244.233.87:26656,c3aa0ff9b3eb17be1b0a26d7c8a5683e8e528e1a@159.89.192.105:26656,d5cf6a6efd0737f68ec026144cdb653abdd11649@rpc.sentinel.badgerbite.xyz:26656"
 minimum_gas_prices: "0.1udvpn"
 remote_tendermint_rpc: "https://rpc.sentinel.co:443"
-statesync_node: https://rpc.sentinel.badgerbite.xyz:443
+statesync_node: https://rpc.sentinel.co:443
 genesis_path: https://gist.githubusercontent.com/freak12techno/37587719948100cc7c4f00fde7127d74/raw/e122946b4ec10f05d281a68fdbc9029077810624/sentinelhub-2-genesis.json
 moniker: "statesyncnode"
