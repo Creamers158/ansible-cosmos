@@ -3,6 +3,7 @@ validator-sentinel      ansible_host=xx.xx.xx.xx
 validator-comdex      ansible_host=xx.xx.xx.xx
 validator-sifchain      ansible_host=xx.xx.xx.xx
 validator-akash      ansible_host=xx.xx.xx.xx
+validator-juno      ansible_host=xx.xx.xx.xx
 
 [testnets]
 validator-2      ansible_host=xx.xx.xx.xx
@@ -23,6 +24,9 @@ validator-sifchain
 
 [akash_2]
 validator-akash
+
+[juno_1]
+validator-juno
 
 [fullnodes:vars]
 ansible_user=root
