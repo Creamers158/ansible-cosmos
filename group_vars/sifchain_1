@@ -7,7 +7,7 @@ github_version: v0.17.0
 binary_name: sifnoded
 fullnode_folder: "{{ ansible_user_dir }}/.sifnoded"
 seeds: "663dec65b754aceef5fcccb864048305208e7eb2@34.248.110.88:26656"
-persistent_peers: "e475925762aed7bd8ca76a3f3a372d2ad38b6d51@65.108.138.80:32656,38886c525b4d38b3526cebc1de4ab837919cfa20@sifchain-rpc.3tekos.fr:28656,38886c525b4d38b3526cebc1de4ab837919cfa20@46.226.128.217:28656"
+persistent_peers: "9173a4c240fc9409b8ba137c76024f2b3aa5811e@142.132.244.107:27010,873fb0a00d94d8b23dd37cadd98233a59e49e38c@161.97.156.216:30656,e475925762aed7bd8ca76a3f3a372d2ad38b6d51@65.108.138.80:32656,38886c525b4d38b3526cebc1de4ab837919cfa20@sifchain-rpc.3tekos.fr:28656,38886c525b4d38b3526cebc1de4ab837919cfa20@46.226.128.217:28656"
 minimum_gas_prices: "0.5rowan"
 remote_tendermint_rpc: "https://sifchain-rpc.polkachu.com:443"
 statesync_node: https://sifchain-rpc.polkachu.com:443
