@@ -1,6 +1,7 @@
 ---
 enable_prometheus: false
-cosmovisor_version: latest
+#cosmovisor_version: latest
+cosmovisor_version: cosmovisor/v1.0.0
 rpc_port: 26657
 rpc_address: 127.0.0.1
 new_go_version: 1.19.3
