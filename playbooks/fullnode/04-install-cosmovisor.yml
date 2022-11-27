@@ -26,6 +26,7 @@
     - name: Set the latest cosmovisor version
       set_fact:
         cosmovisor_version: "{{ result.stdout }}"
+      when: cosmovisor_version == 'latest'
 
     - name: Git checkout to Cosmovisor tag
       ansible.builtin.git:
