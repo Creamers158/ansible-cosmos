@@ -16,6 +16,7 @@
           - git
           - build-essential
           - direnv
+          - jq
         state: latest
         update_cache: true
 
