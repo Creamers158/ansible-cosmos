@@ -15,6 +15,7 @@
         name:
           - git
           - build-essential
+          - direnv
         state: latest
         update_cache: true
 
