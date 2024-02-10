@@ -27,6 +27,45 @@
         version: "{{ github_version }}"
         update: true
 
+#----------------------------------------------------------
+
+    - name: Download a file
+      ansible.builtin.get_url:
+        url: "https://github.com/akash-network/node/releases/download/v{{wget_akash_version}}/akash_{{wget_akash_version}}_linux_amd64.zip"
+        dest: "/tmp/akash_{{wget_akash_version}}_linux_amd64.zip"
+      when: wget_akash_version is defined
+
+    - name: Check if the file was downloaded
+      ansible.builtin.stat:
+        path: "/tmp/akash_{{wget_akash_version}}_linux_amd64.zip"
+      register: file_status
+      when: wget_akash_version is defined
+
+    - name: Notify success if the file was downloaded
+      debug:
+        msg: "The file was downloaded successfully."
+      when: wget_akash_version is defined and file_status.stat.exists
+
+    - name: Ensure /go/bin directory exists
+      ansible.builtin.file:
+        path: /go/bin
+        state: directory
+      when: wget_akash_version is defined and file_status.stat.exists
+
+    - name: Unzip the downloaded file
+      ansible.builtin.unarchive:
+        src: "/tmp/akash_{{wget_akash_version}}_linux_amd64.zip"
+        dest: "/go/bin/"
+      when: wget_akash_version is defined and file_status.stat.exists
+
+    - name: Set executable permissions on the binary
+      ansible.builtin.file:
+        path: "/go/bin/{{ binary_name }}"
+        mode: ugo+x
+      when: wget_akash_version is defined and file_status.stat.exists
+
+#-----------------------------------------------------
+
     - name: Install binary
       make:
         chdir: "{{ github_repo_local }}"
@@ -37,6 +76,14 @@
       args:
         executable: /bin/bash
       register: result
+      when: wget_akash_version is undefined
+
+    - name: Check version
+      ansible.builtin.shell: "/go/bin/{{ binary_name }} version"
+      args:
+        executable: /bin/bash
+      register: result
+      when: wget_akash_version is defined
 
     - name: Display version
       debug:
