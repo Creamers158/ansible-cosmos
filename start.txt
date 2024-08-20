@@ -7,5 +7,5 @@ Or test it locally on a test vm:
 export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook playbooks/fullnode/00-allsteps.yml --extra-vars "hosts=validator-x" --connection=local
 
 Or locally for akash:
-export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook playbooks/fullnode/00-allsteps.yml --extra-vars "hosts=validator-akash wget_akash_version=0.30.1" --connection=local
+export ANSIBLE_HOST_KEY_CHECKING=False && ansible-playbook playbooks/fullnode/00-allsteps.yml --extra-vars "hosts=validator-akash wget_akash_version=0.36.0" --connection=local
 
