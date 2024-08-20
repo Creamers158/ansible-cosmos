@@ -78,7 +78,7 @@
       args:
         executable: /bin/bash
       register: result
-      when: wget_akash_version is undefined
+      #when: wget_akash_version is undefined
 
     - name: Check version
       ansible.builtin.shell: "~/go/bin/{{ binary_name }} version"
