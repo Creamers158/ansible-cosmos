@@ -17,6 +17,7 @@
           - build-essential
           - direnv
           - jq
+          - tar
         state: latest
         update_cache: true
 
@@ -79,11 +80,11 @@
       when: wget_akash_version is undefined
 
     - name: Check version
-      ansible.builtin.shell: "/go/bin/{{ binary_name }} version"
+      ansible.builtin.shell: "~/go/bin/{{ binary_name }} version"
       args:
         executable: /bin/bash
       register: result
-      when: wget_akash_version is defined
+      #when: wget_akash_version is defined
 
     - name: Display version
       debug:
