@@ -19,6 +19,7 @@
           - jq
           - tar
           - lz4
+          - unzip
         state: latest
         update_cache: true
 
@@ -48,21 +49,21 @@
         msg: "The file was downloaded successfully."
       when: wget_akash_version is defined and file_status.stat.exists
 
-    - name: Ensure /go/bin directory exists
+    - name: Ensure /root/go/bin directory exists
       ansible.builtin.file:
-        path: /go/bin
+        path: /root/go/bin
         state: directory
       when: wget_akash_version is defined and file_status.stat.exists
 
     - name: Unzip the downloaded file
       ansible.builtin.unarchive:
         src: "/tmp/akash_{{wget_akash_version}}_linux_amd64.zip"
-        dest: "/go/bin/"
+        dest: "/root/go/bin/"
       when: wget_akash_version is defined and file_status.stat.exists
 
     - name: Set executable permissions on the binary
       ansible.builtin.file:
-        path: "/go/bin/{{ binary_name }}"
+        path: "/root/go/bin/{{ binary_name }}"
         mode: ugo+x
       when: wget_akash_version is defined and file_status.stat.exists
 
@@ -72,13 +73,6 @@
       make:
         chdir: "{{ github_repo_local }}"
         target: install
-
-    - name: Check version
-      ansible.builtin.shell: "{{ binary_name }} version"
-      args:
-        executable: /bin/bash
-      register: result
-      #when: wget_akash_version is undefined
 
     - name: Check version
       ansible.builtin.shell: "~/go/bin/{{ binary_name }} version"
