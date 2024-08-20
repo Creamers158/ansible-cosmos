@@ -18,6 +18,7 @@
           - direnv
           - jq
           - tar
+          - lz4
         state: latest
         update_cache: true
 
