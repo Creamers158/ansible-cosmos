@@ -3,7 +3,7 @@ github_repo_remote: https://github.com/CosmosContracts/Juno
 github_repo_org: CosmosContracts
 github_repo_name: Juno
 github_repo_local: "{{ ansible_user_dir }}/juno"
-github_version: v23.1.0
+github_version: v25.0.0
 binary_name: junod
 fullnode_folder: "{{ ansible_user_dir }}/.juno"
 seeds: "2484353dab0b2c1275765b8ffa2c50b3b36158ca@seed-node.junochain.com:26656"
