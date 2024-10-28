@@ -11,3 +11,4 @@ persistent_peers: "5c189bb73ae43a6fee13794d5833f131c227985c@99.79.95.224:26603,b
 statesync_node: https://juno-rpc.polkachu.com:443
 genesis_path: https://raw.githubusercontent.com/CosmosContracts/mainnet/main/juno-1/genesis.json
 moniker: "statesyncnode"
+minimum-gas-prices = "0juno"
