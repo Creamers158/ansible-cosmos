@@ -11,5 +11,5 @@ persistent_peers: "062847a82a69469c582429235c1b86365b92294d@65.21.201.244:26706,
 minimum_gas_prices: "0.1udvpn"
 remote_tendermint_rpc: "https://rpc.sentinel.co:443"
 statesync_node: https://rpc.sentinel.co:443
-genesis_path: https://gist.githubusercontent.com/freak12techno/37587719948100cc7c4f00fde7127d74/raw/e122946b4ec10f05d281a68fdbc9029077810624/sentinelhub-2-genesis.json
+genesis_path: https://snapshots.polkachu.com/genesis/sentinel/genesis.json
 moniker: "statesyncnode"
